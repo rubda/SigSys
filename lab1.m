@@ -2,7 +2,7 @@
 
 % Punkt 1. 
 MS2P4_mod('1.5*sin(pi*t).*(t>=0&t<1)','1.5*(t>=0&t<1.5)-(t>=2&t<2.5)') % Ex 1
-MS2P4_mod('1.5*(t>=0&t<1.5)-(t>=2&t<2.5)','1.5*sin(pi*t).*(t>=0&t<1)') % Ex 2
+%MS2P4_mod('1.5*(t>=0&t<1.5)-(t>=2&t<2.5)','1.5*sin(pi*t).*(t>=0&t<1)') % Ex 2
 
 %% Punkt 2. 
 MS2P4_mod('1.5*sin(pi*t).*(t>=0&t<1)','1.5*(t+0.2>=0&t+0.2<1.5)-(t+0.2>=2&t+0.2<2.5)')
@@ -22,7 +22,7 @@ fprintf('\n94%% av signaleffekten: %f\n\n', allowed_effect)
 
 for i=1:10
     tone_effect = pwr(remtone(sig, 'all', i));
-    fprintf('Delton: %d - %f\n', i, tone_effect)
+    fprintf('Delton: %d - %f\n', i-1, tone_effect/sig_effect)
 end
 
 % Redovisa en graf med filtrets utsignal. OKEJ. 
