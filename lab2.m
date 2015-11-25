@@ -22,6 +22,7 @@ subplot(2,1,1), set(gca,'xlim',[175,225])
 
 %% c)
 
+load dtmf;
 signal(toner);
 pause;
 
@@ -30,6 +31,8 @@ spect(T);
 
 %% d)
 
+signal(ton);
+pause;
 spect(foutr(ton));
 subplot(2,1,1), set(gca,'xlim',[800,1500])
 
