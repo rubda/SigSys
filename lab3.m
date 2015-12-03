@@ -27,6 +27,12 @@ pzchange(in(D, C, 's'))
 
 %% f)
 
-load lab3_extra/uppgift5f.mat
+load lab3_extra/uppgift5fb.mat
 
 pzchange(H5)
+
+%% e)
+
+signal(toner);
+pause;
+signal(ifoutr(Y));
