@@ -29,10 +29,13 @@ pzchange(in(D, C, 's'))
 
 load lab3_extra/uppgift5fb.mat
 
-pzchange(H5)
+pzchange(H6)
 
 %% e)
 
+load dtmf;
+
 signal(toner);
+Y = output(foutr(toner), H6);
 pause;
 signal(ifoutr(Y));
